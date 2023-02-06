@@ -1,4 +1,4 @@
-// after you've run the python program, make both hands visible to your webcam (a few feet away), and a mandalic pattern should show up
+// after you've run the python program, make both hands visible to your webcam (a few feet away), and a mandalic pattern should show up.
 // the mandala's diameter, and number of chords are functions of how far apart your hands are.
 
 import java.io.*;
