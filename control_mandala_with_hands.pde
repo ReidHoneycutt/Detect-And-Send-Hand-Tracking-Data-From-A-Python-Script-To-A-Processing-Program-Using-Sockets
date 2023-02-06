@@ -87,13 +87,31 @@ void draw() {
     if (is.available() > 0) {
       background(0);
       read();
+      // THIS IS WHERE THE DISPLAY FUNCTIONS SHOULD GO
       // the twist function uses the distance between each hand to determine the diameter
-      //twist();
-      spiral();
-      //fill_opposing_quadrants();       
+      twist();       
     }
   } catch (IOException i) {
       System.out.println(i);
       return;
+  }
+}
+
+void twist() {
+// use the distance between each hand to determine the diameter
+  if (coords.size() > 21) {
+    float d = dist(coords.get(0)[0], coords.get(0)[1], coords.get(30)[0], coords.get(30)[1]) / 5;
+    //float diff = coords.get(0)[1] - coords.get(30)[1];
+    translate(width / 2, height / 2);
+    for (int a = 0; a < 360; a+= d/5) {
+      pushMatrix();
+      rotate(radians(a));
+      for (int b = 0; b < 180; b += d/5) {
+        line(sin(radians(b)) * d, cos(radians(b)) * d, sin(radians(-b)) * d, cos(radians(-b)) * d );
+      }
+      popMatrix();
+    }
+    // in case you want to send the final diameter to another function -to preserve the visual continuity
+    R = d;
   }
 }
