@@ -88,7 +88,7 @@ void draw() {
       background(0);
       read();
       // THIS IS WHERE THE DISPLAY FUNCTIONS SHOULD GO
-      // the twist function uses the distance between each hand to determine the diameter
+      // the twist function uses the distance between each hand to determine the diameter of a mandalic form
       twist();       
     }
   } catch (IOException i) {
