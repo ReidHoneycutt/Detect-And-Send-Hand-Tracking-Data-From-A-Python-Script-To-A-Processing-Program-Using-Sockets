@@ -5,7 +5,7 @@ import time
 from cvzone.HandTrackingModule import HandDetector
 import math
 
-
+# initialize the video capture, detector, and socket objects
 def init_cap():
     cap = cv2.VideoCapture(0)
     return cap
@@ -20,6 +20,7 @@ def init_server():
     s.listen(5)  # the queue
     return s
 
+# functions to establish the client, and to send to the client
 def getClient(s):
     while True:
         clientsocket, Address = s.accept()
