@@ -32,11 +32,14 @@ def getClient(s):
 def send(clientsocket, packet):
     clientsocket.send(packet)
 
-
+# constructs the packet of hand data to send to the client
+# the delimiter "@" seperates the coordinates, and the delimiter ":" seperates the two components of each coordinate
 def msg_construction(hands, max_w, max_h):
     num_hands = 0
     num_landmarks = 0
     packet = ""
+    # if any hands are recognized, create a packet containing the byte representation of the total data length, number of hands, and number of landmarks
+    # the structure of a packet is "total data length + number of hands + number of landmarks + data of the hand coordinates"
     if len(hands) > 0:
         num_hands = 1
         num_landmarks += len(hands[0]["lmList"])
@@ -61,6 +64,7 @@ def msg_construction(hands, max_w, max_h):
     packet = data_len + num_hands + num_landmarks + data
     return packet
 
+# the function which runs continually throughout, searching for hands
 def search_for_hands(clientsocket, cap, detector):
     max_w = 1
     max_h = 1
