@@ -31,6 +31,7 @@ void setup() {
       return;
   }
 }
+// the read() function tries to read the bytes from the InputStream object
 void read() {
   int data_len;
   int num_hands;
@@ -48,19 +49,20 @@ void read() {
     num_hands = Byte.toUnsignedInt(num_hand_buffer[0]);
     num_landmarks = Byte.toUnsignedInt(num_landmark_buffer[0]);
     
-    // Read in the actual hand data
+    // read in the actual hand data
     byte[] data_buffer = new byte[data_len];
     is.read(data_buffer, 0, data_len);
     
     String data = new String(data_buffer, 0, data_len);
-    String[] delimited_coords = data.split("@");
     coords = new Vector<float[]>();
+    
+    // parses the hand data packet using the delimiters "@" to seperate the coordinates, and ":" to seperate the two components of each coordinate
+    String[] delimited_coords = data.split("@");
     for (int i = 0; i < num_landmarks -1; i++) {
       String[] p = delimited_coords[i].split(":");
       if (p.length == 2) {
         float[] c = {width - width * float(p[0]), height * float(p[1])};
         coords.add(c);
-        //vertex(width - width * float(p[0]), height * float(p[1]));
       }
     }
   } catch (IOException i) {
