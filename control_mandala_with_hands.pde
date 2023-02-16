@@ -98,10 +98,11 @@ void draw() {
 }
 
 void twist() {
-// use the distance between each hand to determine the diameter
+// there are 21 landmarks per hand (no less, it recognizes either all 21 or nothing
+// so if coords has more than 21 elements, that means it sees 2 hands, I didn't program it here to do anything if it sees only one hand
   if (coords.size() > 21) {
+    // use the distance between each hand to determine the diameter
     float d = dist(coords.get(0)[0], coords.get(0)[1], coords.get(30)[0], coords.get(30)[1]) / 5;
-    //float diff = coords.get(0)[1] - coords.get(30)[1];
     translate(width / 2, height / 2);
     for (int a = 0; a < 360; a+= d/5) {
       pushMatrix();
