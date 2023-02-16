@@ -31,8 +31,8 @@ void setup() {
       return;
   }
 }
-// the read() function tries to read the bytes from the InputStream object
-void read() {
+// the read_and_parse() function tries to read the bytes from the InputStream object
+void read_and_parse() {
   int data_len;
   int num_hands;
   int num_landmarks;
@@ -74,7 +74,7 @@ void draw() {
   try {
     if (is.available() > 0) {
       background(0);
-      read();
+      read_and_parse();
       // THIS IS WHERE THE DISPLAY FUNCTIONS SHOULD GO
       // the twist function uses the distance between each hand to determine the diameter of a mandalic form
       twist();       
