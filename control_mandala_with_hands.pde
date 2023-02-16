@@ -7,11 +7,6 @@ import java.util.*;
 import java.nio.ByteBuffer;
 import processing.sound.*;
 
-FFT fft;
-AudioIn in;
-int bands = 512;
-float[] spectrum = new float[bands];
-
 Socket socket;
 InputStream is;
 byte[] buffer = new byte[1024];
@@ -22,14 +17,6 @@ void setup() {
   size(displayWidth, displayHeight);
   strokeCap(CORNER);
   stroke(255);
-  fft = new FFT(this, bands);
-  in = new AudioIn(this, 0);
-  // start the Audio Input
-  in.start();
-  
-  // patch the AudioIn
-  fft.input(in);
-  
   // establish a connection
   try {
       socket = new Socket("127.0.0.1", 5000);
@@ -99,7 +86,7 @@ void draw() {
 
 void twist() {
 // there are 21 landmarks per hand (no less, it recognizes either all 21 or nothing
-// so if coords has more than 21 elements, that means it sees 2 hands, I didn't program it here to do anything if it sees only one hand
+// so if coords has more than 21 elements, that means it sees 2 hands, I don't have it do anything if it sees only one hand
   if (coords.size() > 21) {
     // use the distance between each hand to determine the diameter
     float d = dist(coords.get(0)[0], coords.get(0)[1], coords.get(30)[0], coords.get(30)[1]) / 5;
