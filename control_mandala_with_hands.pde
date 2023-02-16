@@ -13,8 +13,7 @@ byte[] buffer = new byte[1024];
 Vector<float[]> coords = new Vector<float[]>();
 
 void setup() {
-  //fullScreen();
-  size(displayWidth, displayHeight);
+  fullScreen();
   strokeCap(CORNER);
   stroke(255);
   // establish a connection
