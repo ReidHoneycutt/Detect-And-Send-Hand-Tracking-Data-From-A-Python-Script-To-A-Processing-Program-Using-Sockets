@@ -1,5 +1,6 @@
+// this file needs to be run using the creative coding software Processing
 // after you've run the python program, make both hands visible to your webcam (a few feet away), and a mandalic pattern should show up.
-// the mandala's diameter, and number of chords are functions of how far apart your hands are.
+// the mandala's diameter, and number of chords, are functions of how far apart your hands are.
 
 import java.io.*;
 import java.net.*;
