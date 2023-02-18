@@ -76,9 +76,8 @@ void draw() {
     if (is.available() > 0) {
       background(0);
       read_and_parse();
-      // THIS IS WHERE THE DISPLAY FUNCTIONS SHOULD GO
-      // the twist function uses the distance between each hand to determine the diameter of a mandalic form
-      twist();       
+      // THIS IS WHERE THE DISPLAY FUNCTIONS GO, include the file "other_visuals.pde" and try substituting twist() with spiral(), or eye_watch() to see what those look like 
+      twist();  
     }
   } catch (IOException i) {
       System.out.println(i);
@@ -86,6 +85,7 @@ void draw() {
   }
 }
 
+// the twist function uses the distance between each hand to determine the diameter of a mandalic form
 void twist() {
 // there are 21 landmarks per hand (no less, it recognizes either all 21 or nothing
 // so if coords has more than 21 elements, that means it sees 2 hands, I don't have it do anything if it sees only one hand
