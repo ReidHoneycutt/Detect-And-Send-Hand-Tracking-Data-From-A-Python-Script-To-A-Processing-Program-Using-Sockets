@@ -76,7 +76,7 @@ void draw() {
     if (is.available() > 0) {
       background(0);
       read_and_parse();
-      // THIS IS WHERE THE DISPLAY FUNCTIONS GO, include the file "other_visuals.pde" and try substituting twist() with spiral(), or eye_watch() to see what those look like 
+      // THIS IS WHERE THE DISPLAY FUNCTIONS GO, include the file "other_visuals.pde" in your sketch and try substituting twist() with spiral(), or eye_watch() to see what those look like 
       twist();  
     }
   } catch (IOException i) {
