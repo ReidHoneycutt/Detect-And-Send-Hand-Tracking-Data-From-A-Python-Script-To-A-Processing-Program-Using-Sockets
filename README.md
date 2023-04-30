@@ -1,6 +1,5 @@
 # Detect-And-Send-Hand-Tracking-Data-From-A-Python-Script-To-A-Processing-Program-Using-Sockets
 
-https://user-images.githubusercontent.com/30945205/222884376-b187e47f-abcc-4cec-b0e3-381c5d8e869e.mp4
 
   This repo contains a python script which runs a video capture using the opencv-python (cv2) library, and a hand detector using cvzone/mediapipe, and it also creates a server to send to a client. When a client connects to the server (such as one of the processing (.pde) programs in this repo), the server will send packets to the client containing the landmarks of the hands that it sees. The .pde scripts in this repo contains clients which receive this landmark data, then parse, and display various animations based on this data. 
 
@@ -10,5 +9,9 @@ REQUIRED PYTHON LIBRARIES: socket, cv2 (called opencv-python in pycharm), cvzone
 
 NOTES: I used pycharm as my python IDE, and used Windows 10 as my OS. MacOS seems to have some access issues when running scripts that use the webcam.
 
+https://user-images.githubusercontent.com/30945205/235345677-5c68f008-6339-425a-9fb3-da182609e900.mp4
 
+https://user-images.githubusercontent.com/30945205/222884376-b187e47f-abcc-4cec-b0e3-381c5d8e869e.mp4
+
+https://user-images.githubusercontent.com/30945205/235345749-ab56e543-3783-46b4-8243-ab987a01abcb.mp4
 
