@@ -9,9 +9,9 @@ REQUIRED PYTHON LIBRARIES: socket, cv2 (called opencv-python in pycharm), cvzone
 
 NOTES: I used pycharm as my python IDE, and used Windows 10 as my OS. MacOS seems to have some access issues when running scripts that use the webcam.
 
-https://user-images.githubusercontent.com/30945205/235345677-5c68f008-6339-425a-9fb3-da182609e900.mp4
-
 https://user-images.githubusercontent.com/30945205/222884376-b187e47f-abcc-4cec-b0e3-381c5d8e869e.mp4
+
+https://user-images.githubusercontent.com/30945205/235345677-5c68f008-6339-425a-9fb3-da182609e900.mp4
 
 https://user-images.githubusercontent.com/30945205/235345749-ab56e543-3783-46b4-8243-ab987a01abcb.mp4
 
