@@ -1,7 +1,9 @@
 # Detect-And-Send-Hand-Tracking-Data-From-A-Python-Script-To-A-Processing-Program-Using-Sockets
 
 
-  This repo contains a python script which runs a video capture using the opencv-python (cv2) library, and a hand detector using cvzone/mediapipe, and it also creates a server to send to a client. When a client connects to the server (such as one of the processing (.pde) programs in this repo), the server will send packets to the client containing the landmarks of the hands that it sees. The .pde scripts in this repo contains clients which receive this landmark data, then parse, and display various animations based on this data. 
+- This repo contains a python script called "search_for_hands_and_send_data.py" which runs a video capture thread using the opencv-python (cv2) library, and a hand detector object using cvzone/mediapipe, and it also creates a server to send to a client.
+- When a client connects to the server (such as one of the processing (.pde) programs, or p5js scripts in this repo), the server will send packets to the client containing the landmarks of the hands that it sees.
+- The .pde scripts in this repo contain clients which receive this landmark data, then parse, and display various animations based on this data in various ways. 
 
   To run it, first open up the .pde files in the creative coding software "Processing", then run the python program after installing the neccessary libraries (included below). Make both hands visible to the camera to see different aesthetics. Various aesthetics will be added to this in additional .pde files. 
 
