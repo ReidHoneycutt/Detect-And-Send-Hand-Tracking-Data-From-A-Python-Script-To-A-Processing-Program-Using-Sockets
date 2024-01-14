@@ -7,9 +7,13 @@
 
   To run it, first open up the .pde files in the creative coding software "Processing", then run the python program after installing the neccessary libraries (included below). Make both hands visible to the camera to see different aesthetics. Various aesthetics will be added to this in additional .pde files. 
 
-REQUIRED PYTHON LIBRARIES: socket, cv2 (called opencv-python in pycharm), cvzone, and mediapipe
+REQUIRED PYTHON LIBRARIES: 
+- mediapipe
+- socket
+- cv2 (called opencv-python in pycharm)
+- cvzone
 
-NOTES: I used pycharm as my python IDE, and used Windows 10 as my OS. MacOS seems to have some access issues when running scripts that use the webcam.
+NOTE: MacOS seems to have some access issues when running scripts that use the webcam, even when pycharm permissions are set to allow webcam.
 
 https://user-images.githubusercontent.com/30945205/235345677-5c68f008-6339-425a-9fb3-da182609e900.mp4
 
