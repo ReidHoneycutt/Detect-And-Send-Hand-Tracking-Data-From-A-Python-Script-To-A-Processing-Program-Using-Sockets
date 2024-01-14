@@ -9,9 +9,9 @@
 
 REQUIRED PYTHON LIBRARIES: 
 - mediapipe
-- socket
 - cv2 (called opencv-python in pycharm)
 - cvzone
+- socket
 
 NOTE: MacOS seems to have some access issues when running scripts that use the webcam, even when pycharm permissions are set to allow webcam.
 
