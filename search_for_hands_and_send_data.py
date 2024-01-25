@@ -28,10 +28,6 @@ def getClient(s):
         if clientsocket:
             return clientsocket
 
-
-def send(clientsocket, packet):
-    clientsocket.send(packet)
-
 # constructs the packet of hand data to send to the client
 # the delimiter "@" seperates the coordinates, and the delimiter ":" seperates the two components of each coordinate
 def msg_construction(hands, max_w, max_h):
