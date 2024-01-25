@@ -86,7 +86,7 @@ def search_for_hands(clientsocket, cap, detector):
                     max_h = max(hands[0]["lmList"][:][1])
 
         msg = msg_construction(hands, max_w, max_h)
-        send(clientsocket, msg)
+        clientsocket.send(msg);
         cv2.waitKey(0)
 
 
